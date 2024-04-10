@@ -2,7 +2,15 @@
 <head>
 <script>
 	function affichage(){
-	alert("Tout es OK !");
+		if(document.getElementById('Control1').checked){
+			document.getElementById("first").style.display="Block";;
+		};
+		if(document.getElementById('Control2').checked){
+			document.getElementById("second").style.display="Block";;
+		};
+		if(document.getElementById('Control3').checked){
+			document.getElementById("third").style.display="Block";;
+		};
 }
 function cacher(){
 	document.getElementById('DuTexte').style.display="None";
@@ -23,8 +31,15 @@ function controler(){
 <body>
 <h1>Mes outils</h1>
 <hr/>
-<h2>Boite de dialogue</h2>
+<h2>Images a Afficher:</h2>
+<p>image 1<input type="checkbox" id="Control1"></p>
+<p>image 2<input type="checkbox" id="Control2"></p>
+<p>image 3<input type="checkbox" id="Control3"></p>
 <button onclick="affichage()">Afficher</button>
+<p><img style="width:100px; display:None" id="first" src="Image1.jpg"/></p>
+<p><img style="width:100px; display:None" id="second" src="Image2.jpg"/></p>
+<p><img style="width:100px; display:None" id="third" src="Image3.jpg"/></p>
+
 <hr/>
 <p id="DuTexte">Ma phrase de texte</p>
 <button onclick="presenter()">Presenter</button>
